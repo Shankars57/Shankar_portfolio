@@ -109,7 +109,7 @@ const Hero = () => {
                   .querySelector("#contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-105"
+              className=" text-xs md:text-lg bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-105"
             >
               Get in Touch
             </button>
@@ -119,7 +119,7 @@ const Hero = () => {
                   .querySelector("#projects")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="text-sm md:text-lg border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300"
+              className="text-xs md:text-lg border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               View My Work
             </button>
