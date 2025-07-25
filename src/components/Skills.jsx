@@ -68,11 +68,11 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-20 bg-black text-white relative overflow-hidden"
+      className=" py-20 bg-black text-white relative overflow-hidden"
     >
       <div className="absolute inset-0 -z-10 opacity-30 bg-gradient-to-br from-blue-800 via-purple-800 to-pink-700 animate-shimmer" />
 
-      <div className="container mx-auto px-6">
+      <div className="container md:w-[80%] mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Technical Skills</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-6 rounded-full"></div>
