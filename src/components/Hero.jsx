@@ -41,12 +41,7 @@ const Hero = () => {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-gray-800 to-slate-800"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundSize:"cover",
-        backgroundPosition:"center",
-        backgroundRepeat:"no-repeat"
-      }}
+   
     >
       <div className="absolute inset-0 bg-gray-900/80"></div>
 
