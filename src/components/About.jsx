@@ -41,9 +41,6 @@ const About = () => {
   return (
     <motion.section
       ref={ref}
-      variants={variants}
-      initial="initial"
-      whileInView="animate"
       id="about"
       className="py-20 bg-gradient-to-br from-black to-slate-900 text-white"
     >
@@ -69,7 +66,7 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* LEFT SIDE: Profile Image & Card */}
+         
             <motion.div variants={childVariants}>
               <img
                 src="/profile.jpeg"
@@ -91,8 +88,8 @@ const About = () => {
                 variants={childVariants2}
                 className="flex items-start space-x-4"
               >
-                <div className="bg-white/10 p-3 rounded-lg">
-                  <School className="text-yellow-400 " size={24} />
+                <div className="bg-white/10 p-3 rounded-lg hover:shadow-sm shadow-yellow-500">
+                  <School className="text-yellow-400  " size={24} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-white mb-2">Education</h4>
@@ -108,7 +105,7 @@ const About = () => {
                 variants={childVariants2}
                 className="flex items-start space-x-4"
               >
-                <div className="bg-white/10 p-3 rounded-lg">
+                <div className="bg-white/10 p-3 rounded-lg hover:shadow-sm shadow-green-500">
                   <LaptopIcon className="text-green-400" size={24} />
                 </div>
                 <div>
@@ -127,7 +124,7 @@ const About = () => {
                 variants={childVariants2}
                 className="flex items-start space-x-4"
               >
-                <div className="bg-white/10 p-3 rounded-lg">
+                <div className="bg-white/10 p-3 rounded-lg hover:shadow-sm shadow-blue-500">
                   <Globe className="text-blue-400" size={24} />
                 </div>
                 <div>
