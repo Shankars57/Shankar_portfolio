@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Download } from "lucide-react";
-import { animate, easeInOut, motion, transform } from "framer-motion";
+import { motion } from "framer-motion";
+
 const variants = {
   initial: { y: -20, opacity: 0 },
   animate: {
@@ -18,16 +19,11 @@ const variants = {
 };
 
 const childVariants = {
-  initial: {
-    y: -10,
-    opacity: 0,
-  },
+  initial: { y: -10, opacity: 0 },
   animate: {
     y: 0,
     opacity: 1,
-    transition: {
-      type: "spring",
-    },
+    transition: { type: "spring" },
   },
 };
 
@@ -48,10 +44,7 @@ const variants2 = {
 };
 
 const childVariants2 = {
-  initial: {
-    x: -100,
-    opacity: 0,
-  },
+  initial: { x: -100, opacity: 0 },
   animate: {
     x: 0,
     opacity: 1,
@@ -80,7 +73,6 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-
       const scrollPosition = window.scrollY + 120;
       for (const item of navItems) {
         const section = document.querySelector(item.href);
@@ -104,107 +96,92 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-xs shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-white/30 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <motion.div
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ type: "spring" }}
-            className={`font-bold text-xl text-slate-500 ${
-              isScrolled && "text-black"
-            }`}
-          >
-            BCDGS
-          </motion.div>
-
-          <motion.div
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            className="hidden md:flex items-center space-x-8"
-          >
-            {navItems.map((item) => (
-              <>
+      <div className="max-w-7xl mx-auto px-6">
+        <nav className="py-4">
+          <div className="flex items-center justify-between">
+            <motion.div
+              initial={{ x: -200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ type: "spring" }}
+              className={`font-bold text-xl ${
+                isScrolled ? "text-gray-800" : "text-gray-100"
+              }`}
+            >
+              BCDGS
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="initial"
+              animate="animate"
+              className="hidden md:flex items-center space-x-8"
+            >
+              {navItems.map((item) => (
                 <motion.button
                   variants={childVariants}
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`transition-colors relative
-                     lg:px-2
-                   duration-200  
-
+                  className={`relative lg:px-2 transition-colors duration-200 text-sm font-medium
                     ${
-                     activeSection === item.href
-                       ? "text-blue-600 font-semibold"
-                       : "text-slate-600 hover:text-blue-600"
-                   }`}
+                      activeSection === item.href
+                        ? "text-blue-600 font-semibold"
+                        : isScrolled
+                        ? "text-gray-700 hover:text-blue-600"
+                        : "text-gray-200 hover:text-blue-400"
+                    }`}
                 >
                   {item.label}
                   {activeSection === item.href && (
                     <motion.div
-                      key={Math.random()*item.length}
-                      initial={{ y: -10 }}
-                      animate={{
-                        y: 0,
-                        transition: {
-                          type: "spring",
-                          duration: 0.5,
-                        },
-                      }}
-                      className={`absolute w-full 
-                         h-full
-                          inset-0 
-                          -z-1
-                     
-                       rounded ${isScrolled ? "bg-blue-200" : ""}`}
-                    ></motion.div>
+                      layoutId="underline"
+                      className={`absolute w-full h-full inset-0 -z-10 rounded ${
+                        isScrolled ? "bg-blue-100" : "bg-white/10"
+                      }`}
+                    />
                   )}
                 </motion.button>
-              </>
-            ))}
-          </motion.div>
+              ))}
+            </motion.div>
 
-          <div className="flex items-center space-x-4">
-            <motion.button
-              initial={{ x: 200, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ type: "spring" }}
-              onClick={() => window.open("/resume.pdf", "_blank")}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 hidden md:text-sm md:flex items-center gap-2"
-            >
-              <Download size={16} />
-              Resume
-            </motion.button>
-            <div className="md:hidden">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
+            <div className="flex items-center space-x-4">
+              <motion.button
+                initial={{ x: 200, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ type: "spring" }}
+                onClick={() => window.open("/resume.pdf", "_blank")}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 hidden md:flex items-center gap-2"
+              >
+                <Download size={16} />
+                Resume
+              </motion.button>
+              <div className="md:hidden">
+                <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4" >
+          {isMenuOpen && (
             <motion.div
               variants={variants2}
               initial="initial"
               animate="animate"
-            
-              className="flex flex-col space-y-3"
+              className="md:hidden mt-4 pb-4 flex flex-col space-y-3"
             >
               {navItems.map((item) => (
                 <motion.button
                   variants={childVariants2}
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className={`text-left transition-colors duration-200 ${
+                  className={`text-left text-sm font-medium
+                   transition-colors duration-200 ${
                     activeSection === item.href
                       ? "text-blue-600 font-semibold"
-                      : "text-slate-600 hover:text-blue-600"
+                      : "text-gray-400 hover:text-blue-600"
                   }`}
                 >
                   {item.label}
@@ -212,15 +189,15 @@ const Header = () => {
               ))}
               <button
                 onClick={() => window.open("/resume.pdf", "_blank")}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 w-fit"
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200 flex items-center gap-2 w-fit"
               >
                 <Download size={16} />
                 Resume
               </button>
             </motion.div>
-          </div>
-        )}
-      </nav>
+          )}
+        </nav>
+      </div>
     </header>
   );
 };
