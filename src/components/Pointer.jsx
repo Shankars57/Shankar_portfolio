@@ -24,9 +24,11 @@ const Pointer = () => {
         transition: {
           type: "spring",
           duration: 0.5,
+          stiffness:200,
+          damping:10
         },
       }}
-      className="cursor hidden md:flex"
+      className="cursor hidden sm:flex"
     ></motion.div>
   );
 };

@@ -41,6 +41,9 @@ const About = () => {
   return (
     <motion.section
       ref={ref}
+      variants={variants}
+      initial="initial"
+      animate={isInView?"animate":""}
       id="about"
       className="py-20 bg-gradient-to-br from-black to-slate-900 text-white"
     >
