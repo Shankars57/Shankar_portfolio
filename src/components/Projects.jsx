@@ -31,7 +31,7 @@ const Projects = () => {
         "A property listing platform with detailed house pages, comment system, dynamic filters, and backend CRUD operations.",
       techStack: ["React", "Node.js", "Express.js"],
       githubUrl: "https://github.com/Shankars57/House_Rental_Project",
-      liveUrl: "https://house-rental-project-pi.vercel.app/",
+      liveUrl: "https://house-rental-project-45s4.vercel.app/",
       category: "Full Stack",
       year: "2025",
       status: true,
@@ -197,12 +197,13 @@ const Projects = () => {
             <Github size={20} />
             <span>View All Projects</span>
           </a>
-          <motion.hr initial={{width:0 }} whileInView={{width:"90%" ,  transition:{duration:2}}} 
-           className="hidden md:flex w-[90%] m-auto h-[2px] text-red-600 mt-20" />
+          <motion.hr
+            initial={{ width: 0 }}
+            whileInView={{ width: "90%", transition: { duration: 2 } }}
+            className="hidden md:flex w-[90%] m-auto h-[2px] text-red-600 mt-20"
+          />
         </motion.div>
-         
       </div>
-       
     </section>
   );
 };
