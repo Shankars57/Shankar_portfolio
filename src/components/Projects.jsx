@@ -31,7 +31,7 @@ const Projects = () => {
         "A property listing platform with detailed house pages, comment system, dynamic filters, and backend CRUD operations.",
       techStack: ["React", "Node.js", "Express.js"],
       githubUrl: "https://github.com/Shankars57/House_Rental_Project",
-      liveUrl: "https://house-rental-project-45s4.vercel.app/",
+      liveUrl: "https://house-rent-lac-delta.vercel.app/",
       category: "Full Stack",
       year: "2025",
       status: true,

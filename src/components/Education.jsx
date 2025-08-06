@@ -20,7 +20,7 @@ const Education = () => {
       institution: "Aditya College of Engineering and Technology",
       location: "Surampalem, India",
       duration: "Jun 2022 – Present",
-      gpa: "8.16 CGPA / 74.1%",
+      gpa: "8.16 CGPA / 74.1% (still ongoing)",
       status: "Ongoing",
       highlights: [
         "Specialized in Artificial Intelligence and Machine Learning.",
@@ -262,9 +262,11 @@ const Education = () => {
           </motion.div>
         </div>
       </div>
-      <motion.hr initial={{width:0 }} whileInView={{width:"90%" , 
-       transition:{duration:2}}} 
-                 className="hidden md:flex w-[90%] m-auto h-[2px] text-blue-800 mt-20" />
+      <motion.hr
+        initial={{ width: 0 }}
+        whileInView={{ width: "90%", transition: { duration: 2 } }}
+        className="hidden md:flex w-[90%] m-auto h-[2px] text-blue-800 mt-20"
+      />
     </section>
   );
 };
