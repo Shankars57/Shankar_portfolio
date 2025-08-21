@@ -151,7 +151,7 @@ const Header = () => {
                 initial={{ x: 200, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ type: "spring" }}
-                onClick={() => window.open("/resume.pdf", "_blank")}
+                onClick={() => window.open("/Shankar_resume.pdf", "_blank")}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 hidden md:flex items-center gap-2"
               >
                 <Download size={16} />
@@ -179,10 +179,10 @@ const Header = () => {
                   onClick={() => scrollToSection(item.href)}
                   className={`text-left text-sm font-medium
                    transition-colors duration-200 ${
-                    activeSection === item.href
-                      ? "text-blue-600 font-semibold"
-                      : "text-gray-400 hover:text-blue-600"
-                  }`}
+                     activeSection === item.href
+                       ? "text-blue-600 font-semibold"
+                       : "text-gray-400 hover:text-blue-600"
+                   }`}
                 >
                   {item.label}
                 </motion.button>
