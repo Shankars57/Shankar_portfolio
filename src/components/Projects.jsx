@@ -5,6 +5,17 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
+      title: "Ping UP",
+      description:
+        "PingUp is a social media app where people can connect, share updates, and engage with friends in real time. It’s designed to be simple, interactive, and fun, making it easy for users to express themselves and stay connected.",
+      techStack: ["React", "Node.js", "Express.js", "MongoDB"],
+      githubUrl: "https://github.com/Shankars57/Connect_Social_Media",
+      liveUrl: "https://pingup-gilt.vercel.app/",
+      category: "Full Stack",
+      year: "2025",
+      status: true,
+    },
+    {
       title: "Digital Diner",
       description:
         "A full-stack restaurant ordering system with customer and admin panels, featuring order history, dynamic menu, and PostgreSQL storage.",
