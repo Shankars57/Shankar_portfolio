@@ -26,6 +26,11 @@ import {
   SiFramer,
   SiAxios,
   SiExpress,
+  SiLeetcode,
+  SiGeeksforgeeks,
+  SiCodechef,
+  SiCodeforces,
+  SiHackerrank,
 } from "react-icons/si";
 
 const categorizedSkills = {
@@ -61,6 +66,38 @@ const categorizedSkills = {
     { name: "Postman", icon: <SiPostman />, color: "text-orange-500" },
     { name: "JWT", icon: <FaKey />, color: "text-red-500" },
     { name: "Vercel", icon: <SiVercel />, color: "text-white" },
+  ],
+  "DSA & CP Platforms": [
+    {
+      name: "LeetCode",
+      icon: <SiLeetcode />,
+      color: "text-red-500",
+      link: "https://leetcode.com/u/shenkarb762/",
+    },
+    {
+      name: "GFG",
+      icon: <SiGeeksforgeeks />,
+      color: "text-green-500",
+      link: "https://www.geeksforgeeks.org/user/shankara7h6/",
+    },
+    {
+      name: "CodeChef",
+      icon: <SiCodechef />,
+      color: "text-white-500",
+      link: "https://www.codechef.com/users/shankar_s58",
+    },
+    {
+      name: "CodeForces",
+      icon: <SiCodeforces />,
+      color: "text-white-500",
+      link: "https://codeforces.com/profile/B.Shankar7",
+    },
+    {
+      name: "Hacker Rank",
+      icon: <SiHackerrank />,
+      color: "text-blue-500",
+      link: "https://www.hackerrank.com/profile/shankarpubg4",
+    },
   ],
 };
 
@@ -103,13 +140,38 @@ const Skills = () => {
                     tiltMaxAngleX={10}
                     tiltMaxAngleY={10}
                     transitionSpeed={250}
-                    className="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-md hover:shadow-blue-500/30 border border-white/10 flex flex-col items-center justify-center transition-all duration-300 group"
+                    className="bg-white/10 
+                    backdrop-blur-sm p-4 rounded-xl shadow-md hover:shadow-blue-500/30 border border-white/10 flex flex-col items-center justify-center transition-all duration-300 group"
                   >
                     <div className={`text-4xl mb-2 z-10 ${skill.color}`}>
                       {skill.icon}
                     </div>
                     <span className="text-sm text-gray-200 font-medium text-center">
-                      {skill.name}
+                      {skill.link ? (
+                        <div className="relative flex items-center justify-center group ">
+                          <a
+                            href={skill.link}
+                            className="
+      text-xl font-medium text-white
+      hover:text-blue-500 transition duration-300
+    "
+                          >
+                            {skill.name}
+                          </a>
+                          <span
+                            className="
+      absolute top-6 text-xs px-2 py-1 rounded-md
+      bg-gray-800 text-white
+      opacity-0 group-hover:opacity-100
+      transition duration-300
+    "
+                          >
+                            View profile
+                          </span>
+                        </div>
+                      ) : (
+                        <p>{skill.name}</p>
+                      )}
                     </span>
                   </Tilt>
                 </motion.div>
