@@ -12,6 +12,7 @@ import {
   Webcam,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { SiLeetcode } from "react-icons/si";
 
 const Education = () => {
   const education = [
@@ -62,6 +63,12 @@ const Education = () => {
       issuer: "APSSDC",
       date: "2024",
       icon: <BrainCircuit size={24} />,
+    },
+    {
+      title: "LeetCode 50days Badge",
+      issuer: "LeetCode",
+      date: "12-sept-2025",
+      icon: <SiLeetcode />,
     },
     {
       title: "HTML/CSS/JavaScript Bootcamp",
