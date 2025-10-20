@@ -43,7 +43,7 @@ const About = () => {
       ref={ref}
       variants={variants}
       initial="initial"
-      animate={isInView?"animate":""}
+      animate={isInView ? "animate" : ""}
       id="about"
       className="py-20 bg-gradient-to-br from-black to-slate-900 text-white"
     >
@@ -69,12 +69,11 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-         
             <motion.div variants={childVariants}>
               <img
-                src="/profile.jpeg"
+                src="/profile_pic.jpeg"
                 alt="Profile"
-                className="rounded-lg mb-4 w-48 h-48 object-cover mx-auto border-4 border-blue-500"
+                className="rounded-lg mb-4 w-52 h-52 object-cover mx-auto border-4 border-blue-500"
               />
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-6 text-white shadow-lg">
                 <h3 className="text-2xl font-bold mb-3">Hi, I'm Shankar</h3>
@@ -99,7 +98,7 @@ const About = () => {
                   <p className="text-gray-300">
                     Pursuing B.Tech in Computer Science and Engineering in
                     Specialization AI/ML at Aditya college of Engineering and
-                    Technology , Surampalem. CGPA: 8.16/10.
+                    Technology , Surampalem. CGPA: 8.24/10.
                   </p>
                 </div>
               </motion.div>
@@ -165,8 +164,11 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-      <motion.hr initial={{width:0 }} whileInView={{width:"90%" ,  transition:{duration:2}}} 
-                 className="hidden md:flex w-[90%] m-auto h-[2px] text-blue-600 mt-20" />
+      <motion.hr
+        initial={{ width: 0 }}
+        whileInView={{ width: "90%", transition: { duration: 2 } }}
+        className="hidden md:flex w-[90%] m-auto h-[2px] text-blue-600 mt-20"
+      />
     </motion.section>
   );
 };

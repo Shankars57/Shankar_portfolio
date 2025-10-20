@@ -31,6 +31,8 @@ import {
   SiCodechef,
   SiCodeforces,
   SiHackerrank,
+  SiSocketdotio,
+  SiRedux,
 } from "react-icons/si";
 
 const categorizedSkills = {
@@ -54,6 +56,8 @@ const categorizedSkills = {
     { name: "Express.js", icon: <SiExpress />, color: "text-gray-300" },
     { name: "Framer Motion", icon: <SiFramer />, color: "text-pink-400" },
     { name: "Axios", icon: <SiAxios />, color: "text-blue-300" },
+    { name: "Socket.IO", icon: <SiSocketdotio />, color: "text-green-500" },
+    { name: "Redux (Learning)", icon: <SiRedux />, color: "text-red-500" },
   ],
   Databases: [
     { name: "MongoDB", icon: <SiMongodb />, color: "text-green-400" },
@@ -67,7 +71,7 @@ const categorizedSkills = {
     { name: "JWT", icon: <FaKey />, color: "text-red-500" },
     { name: "Vercel", icon: <SiVercel />, color: "text-white" },
   ],
-  "DSA & CP Platforms": [
+  "DSA & CP Platforms (Links)": [
     {
       name: "LeetCode",
       icon: <SiLeetcode />,

@@ -2,6 +2,7 @@ import React from "react";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import bg from "/bg.gif";
+import { TypeAnimation } from "react-type-animation";
 
 const containerVariants = {
   initial: {},
@@ -44,9 +45,7 @@ const Hero = () => {
       }}
       className="relative min-h-screen sm:bg-none flex items-center justify-center"
     >
-
       <div className="absolute inset-0 bg-black/70 z-0" />
-
 
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <motion.div
@@ -77,7 +76,6 @@ const Hero = () => {
             web experiences.
           </motion.p>
 
-       
           <motion.div
             variants={itemVariants}
             className="flex justify-center space-x-6 mb-12"
@@ -106,7 +104,6 @@ const Hero = () => {
             </a>
           </motion.div>
 
-  
           <motion.div
             variants={itemVariants}
             className="flex justify-center space-x-4 mb-16"

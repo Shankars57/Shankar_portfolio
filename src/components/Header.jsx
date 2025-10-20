@@ -188,7 +188,7 @@ const Header = () => {
                 </motion.button>
               ))}
               <button
-                onClick={() => window.open("/resume.pdf", "_blank")}
+                onClick={() => window.open("/Shankar_resume.pdf", "_blank")}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200 flex items-center gap-2 w-fit"
               >
                 <Download size={16} />

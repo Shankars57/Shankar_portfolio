@@ -21,7 +21,7 @@ const Education = () => {
       institution: "Aditya College of Engineering and Technology",
       location: "Surampalem, India",
       duration: "Jun 2022 – Present",
-      gpa: "8.16 CGPA / 74.1% (still ongoing)",
+      gpa: "8.24 CGPA / 74.9% (still ongoing)",
       status: "Ongoing",
       highlights: [
         "Specialized in Artificial Intelligence and Machine Learning.",

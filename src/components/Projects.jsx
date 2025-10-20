@@ -4,6 +4,17 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
+     {
+      title: "Password Vault",
+      description:
+        "Password Vault is a secure web application that lets users create, store, manage, and access their passwords safely. It uses encryption to protect user data and provides an easy-to-use interface for organizing login details in one place.",
+      techStack: ["React", "Node.js", "Express.js", "MongoDB"],
+      githubUrl: "https://github.com/Shankars57/PasswordsVault",
+      liveUrl: "https://passwords-vault-7.vercel.app/",
+      category: "Full Stack",
+      year: "2025",
+      status: true,
+    },
     {
       title: "Ping UP",
       description:
@@ -40,7 +51,7 @@ const Projects = () => {
       title: "House Rental Platform",
       description:
         "A property listing platform with detailed house pages, comment system, dynamic filters, and backend CRUD operations.",
-      techStack: ["React", "Node.js", "Express.js"],
+      techStack: ["React", "Node.js", "Express.js", "MongoDB"],
       githubUrl: "https://github.com/Shankars57/House_Rental_Project",
       liveUrl: "https://house-rent-lac-delta.vercel.app/",
       category: "Full Stack",
