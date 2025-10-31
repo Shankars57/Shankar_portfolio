@@ -4,7 +4,26 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
-     {
+    {
+      title: "LearnHub",
+      description:
+        "LearnHub is an all-in-one collaborative learning platform where students can connect, learn, and grow together. It features curated YouTube playlists, real-time chat rooms, an AI-powered mentor, rich study materials, cheat sheets, and resume templates — all built to enhance productivity and community learning.",
+      techStack: [
+        "React",
+        "TailwindCSS",
+        "Nodejs",
+        "ExpressJS",
+        "MongoDB",
+        "Youtube v3 API",
+        "Socket.io",
+      ],
+      githubUrl: "https://github.com/Shankars57/LearnHub",
+      liveUrl: "https://learn-hub-rho.vercel.app",
+      category: "Fullstack",
+      year: "2025",
+      status: true,
+    },
+    {
       title: "Password Vault",
       description:
         "Password Vault is a secure web application that lets users create, store, manage, and access their passwords safely. It uses encryption to protect user data and provides an easy-to-use interface for organizing login details in one place.",
